@@ -1,249 +1,204 @@
-/*css reset*/
 * {
-    margin: 0;
-    padding: 0;
-  }
-  :root {
-    --navbar-height: 59px;
-  }
-  
-  /* Navigation Bar */
-  #navbar {
-    display: flex;
-    position: relative;
-    display: flex;
-    align-items: center;
-    top: 0px;
-    font-size: 1rem;
-  }
-  
-  /* Navigation Bar: Logo and Image */
-  #logo {
-    margin: -7px 8px;
-  }
-  #logo img {
-    margin: 0px -15px;
-    height: 107px;
-  }
-  /* Navigation Bar: List Styling */
-  
-  #navbar ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-  }
-  #navbar::before {
-    content: "";
-    background-color: rgb(255 201 114);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.3;
-  }
-  #navbar ul li {
-    /* background-color: blue; */
-    list-style: none;
-    /* margin: 2% 1%; */
-    /* padding: 1%  ; */
-    font-size: 1rem;
-    /* padding: 1%; */
-    align-items: center;
-    justify-content: center;
-  }
-  #navbar ul li a {
-    /* background-color: green; */
-    padding: 18px 17px;
-    /* margin: 26px 23px; */
-    border-radius: 12px;
-    text-decoration: none;
-    color: black;
-  }
-  #navbar ul li a:hover {
-    background-color: rgb(180, 121, 55);
-    color: rgb(255, 255, 255);
-  }
-  /* Home Section */
-  #home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 33px 44px;
-    padding-bottom: 180px;
-  }
-  #home::before {
-    content: "";
-    position: absolute;
-    background: url(background.jpg);
-    height: 90%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.5;
-  }
-  /* Utility Classes */
-  section h1 {
-    color: rgb(161 86 34);
-    text-align: center;
-    font-family: "Playfair Display", serif;
-  }
-  section p {
-    color: rgb(79 37 15);
-    text-align: center;
-    font-size: 15px;
-    font-family: "Playfair Display", serif;
-    font-weight: 550;
-    padding-top: 4px;
-    padding-bottom: 13px;
-    padding-left: 90px;
-    padding-right: 90px;
-  }
-  #h-primary {
-    font-size: 3rem;
-    padding: 12px;
-  }
-  #btn {
-    border: 4px solid rgb(224, 171, 110);
-    background-color: rgb(161 86 34);
-    color: white;
-    padding: 13px 14px;
-    border-radius: 33px;
-    font-size: 0.8rem;
-    cursor: pointer;
-  }
-  #btn:hover {
-    background-color: rgb(224, 171, 110);
-  }
-  /* Services Section */
-  #services {
-    display: flex;
-    margin: 5px;
-    padding-top: 0px;
-  }
-  #services .box {
-    margin: 10px;
-    border: 8px solid burlywood;
-    border-radius: 22px;
-    background-color: rgb(255 252 250);
-  }
-  
-  #services .box img {
-    height: 150px;
-    margin: auto;
-    display: block;
-  }
-  #services .box #picture2 {
-    height: 92px;
-    margin: auto;
-    display: block;
-    padding-top: 34px;
-    padding-bottom: 19px;
-  }
-  #services .box #picture3 {
-    height: 147px;
-    margin: auto;
-    display: block;
-  }
-  #services .box h2 {
-    text-align: center;
-  }
-  .services-container h1 {
-    font-size: 2rem;
-    padding-bottom: 22px;
-  }
-  /* Clients */
-  #client-section h1 {
-    font-size: 2rem;
-    margin-top: 40px;
-  }
-  #clients {
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: center;
-  }
-  .client-item {
-    padding: 5px;
-  }
-  #client-section {
-    height: 80%;
-  }
-  /* Contact us */
-  #contact h1 {
-    font-size: 2rem;
-    padding: 0px 33px;
-  }
-  #contactbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-  }
-  #contactbox input,
-  #contactbox textarea {
-    width: 100%;
-    padding: 0.5rem;
-  }
-  .form-group {
-    padding: 3px;
-  }
-  .form-group #name {
-    border-radius: 8px;
-    background-color: rgb(255 252 250);
-  }
-  .form-group #name:hover {
-    border: 4px solid rgb(161 86 34);
-  }
-  .form-group #contact {
-    border-radius: 8px;
-    background-color: rgb(255 252 250);
-  }
-  .form-group #contact:hover {
-    border: 4px solid rgb(161 86 34);
-  }
-  .form-group #email {
-    border-radius: 8px;
-    background-color: rgb(255 252 250);
-  }
-  .form-group #email:hover {
-    border: 4px solid rgb(161 86 34);
-  }
-  .form-group #message {
-    border-radius: 8px;
-    background-color: rgb(255 252 250);
-  }
-  .form-group #message:hover {
-    border: 4px solid rgb(161 86 34);
-  }
-  #contactbox label {
-    font-family: "Playfair Display", serif;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  /* About us */
-  .about h1 {
-    font-size: 2rem;
-    padding-bottom: 10px;
-  }
-  #aboutbox p {
-    padding: 5px 95px;
-  }
-  .about::before {
-    content: "";
-    position: absolute;
-    background: url(background.jpg);
-    z-index: -1;
-    opacity: 0.3;
-    height: 50%;
-    width: 100%;
-  }
-  /* Footer */
-  footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px 33px;
-    /* margin: 60px 10px; */
-    margin-top: 70px;
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --navbar-height: 59px;
+}
+#navbar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  top: 0;
+  font-size: 1rem;
+}
+#logo {
+  margin: -7px 8px;
+}
+#logo img {
+  margin: 0 -15px;
+  height: 107px;
+}
+#navbar ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+#navbar::before {
+  content: "";
+  background-color: rgb(255, 201, 114);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+#navbar ul li {
+  list-style: none;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+#navbar ul li a {
+  padding: 18px 17px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: black;
+}
+#navbar ul li a:hover {
+  background-color: rgb(180, 121, 55);
+  color: #fff;
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 33px 44px 180px;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  background: url(background.jpg);
+  height: 90%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+section h1 {
+  color: rgb(161, 86, 34);
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+section p {
+  color: rgb(79, 37, 15);
+  text-align: center;
+  font-size: 15px;
+  font-family: "Playfair Display", serif;
+  font-weight: 550;
+  padding: 4px 90px 13px;
+}
+#h-primary {
+  font-size: 3rem;
+  padding: 12px;
+}
+#btn {
+  border: 4px solid rgb(224, 171, 110);
+  background-color: rgb(161, 86, 34);
+  color: #fff;
+  padding: 13px 14px;
+  border-radius: 33px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+#btn:hover {
+  background-color: rgb(224, 171, 110);
+}
+#services {
+  display: flex;
+  margin: 5px;
+  padding-top: 0;
+}
+#services .box {
+  margin: 10px;
+  border: 8px solid burlywood;
+  border-radius: 22px;
+  background-color: rgb(255, 252, 250);
+}
+#services .box img {
+  height: 150px;
+  margin: auto;
+  display: block;
+}
+#services .box #picture2 {
+  height: 92px;
+  margin: auto;
+  display: block;
+  padding: 34px 0 19px;
+}
+#services .box #picture3 {
+  height: 147px;
+  margin: auto;
+  display: block;
+}
+#services .box h2 {
+  text-align: center;
+}
+.services-container h1 {
+  font-size: 2rem;
+  padding-bottom: 22px;
+}
+#client-section h1 {
+  font-size: 2rem;
+  margin-top: 40px;
+}
+#clients {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-item {
+  padding: 5px;
+}
+#client-section {
+  height: 53%;
+}
+#contact h1 {
+  font-size: 2rem;
+  padding: 0 33px;
+}
+#contactbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+#contactbox input,
+#contactbox textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+.form-group {
+  padding: 3px;
+}
+.form-group #name,
+.form-group #contact,
+.form-group #email,
+.form-group #message {
+  border-radius: 8px;
+  background-color: rgb(255, 252, 250);
+}
+.form-group #name:hover,
+.form-group #contact:hover,
+.form-group #email:hover,
+.form-group #message:hover {
+  border: 4px solid rgb(161, 86, 34);
+}
+#contactbox label {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.about h1 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+#aboutbox p {
+  padding: 5px 95px;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  background: url(background.jpg);
+  z-index: -1;
+  opacity: 0.3;
+  height: 50%;
+  width: 100%;
+}
+footer {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px 33px;
+  margin-top: 70px;
+}
